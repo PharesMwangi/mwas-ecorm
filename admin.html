@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Mwas Stylists</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Mwas Car Dealers</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="resources.html">Products</a></li>
+                <li><a href="home.html#about">About</a></li>
+                <li><a href="admin.html" class="active">Admin</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="admin-container">
+        <div class="admin-header">
+            <h2>Admin Dashboard</h2>
+        </div>
+
+        <div class="admin-panel">
+            <div class="admin-nav">
+                <ul>
+                    <li><a href="#" class="active" data-tab="add-product">Add Product</a></li>
+                    <li><a href="#" data-tab="manage-products">Manage Products</a></li>
+                    <li><a href="#" data-tab="orders">Orders</a></li>
+                </ul>
+            </div>
+
+            <div class="admin-content">
+                <!--add product tab-->
+                <div id="add-product" class="admin-tab active">
+                    <h3>Add New Product</h3>
+                    <form action="" id="add-product-form" id="add-product-form">
+                        <div class="form-group">
+                            <label for="product-name">Product Name</label>
+                            <input type="text" id="product-name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-price">Price (Ksh)</label>
+                            <input type="number" id="product-price" name="price" min="0" step="0.01" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-category">Category</label>
+                            <select id="product-category" name="category" required>
+                                <option value="">All Categories</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Mazda">Mazda</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-image">Image URL</label>
+                            <input type="text" id="product-image" name="image" placeholder="Enter image URL or leave blank for placeholder">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-description">Description</label>
+                            <textarea id="product-description" name="description" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="product-featured">Featured Product</label>
+                            <select id="product-featured" name="featured">
+                                <option value="false">No</option>
+                                <option value="true">Yes</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn">Add Product</button>
+                    </form>
+                </div>
+
+                <!--manage products-->
+                <div id="manage-products" class="admin-tab">
+                    <h3>Manage Products</h3>
+                    <table class="products-table">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Category</th>
+                                <th>Featured</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="products-table-body">
+                            <!--Product willl be dynamically loaded here-->
+                            <tr>
+                                <td colspan="6" class="loading">Loading products...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--orders tab-->
+                <div id="orders" class="admin-tab">
+                    <h3>Orders</h3>
+                    <table  class="products-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Total</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orders-table-body">
+                            <!--orders will be dynamically loaded here-->
+                            <tr>
+                                <td colspan="6">No orders yet</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Karatina, Nyeri County</p>
+                <p><i class="fas fa-phone"></i> +254 700 000000</p>
+                <p><i class="fas fa-envelope"></i> info@mwasstylists.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Mwas Stylists. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

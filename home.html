@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Mwas Car Dealers</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="home.html#about">About</a></li>
+                <li><a href="resources.html">Products</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon">
+            <a href="cart.html">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Mwas Car Dealers</h2>
+            <h3>The home of the best vehicles in the country</h3>
+            <p>Discover the latest car at an affordable price</p>
+            <a href="resources.html" class="btn">Shop Now</a>
+        </div>
+    </div>
+
+    <div class="featured-products">
+        <h2>Featured Products</h2>
+        <div id="featured-products-container" class="products-grid">
+            <div class="loading">Loading featured products...</div>
+        </div>
+    </div>
+        
+    <div id="about">
+        <h2>About Us</h2>
+        
+        <div class="about-container">
+            <div class="about-text">
+                <p>We are a car-dealershp-shop located at Karatina, Nyeri county,<br>
+                    where we work to satisfy our customers with the atest vehicles in market <br> </p><br><br>
+                   <p>
+                   <b><i> our aim is to satisfy our customers with the best <br>
+               vehicle of their choice.</i></b></p><br>
+               <p>You can get us at our shop in Karatina any day of the week.</p>
+            </div>
+            <div class="about-image">
+                <img src="icons/car-park.jpg" alt="Shop" >
+            </div>
+        </div> 
+    </div>
+
+<footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Karatina, Nyeri County</p>
+                <p><i class="fas fa-phone"></i> +254 700 000000</p>
+                <p><i class="fas fa-envelope"></i> info@mwasstylists.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Mwas Stylists. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
